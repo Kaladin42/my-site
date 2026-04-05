@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logo Showcase — Sai Bharadwaj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+SC:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      background: #111110;
+      color: #e8e3d6;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      padding: 60px 40px;
+      min-height: 100vh;
+    }
+
+    /* Page header */
+    .page-header {
+      max-width: 960px;
+      margin: 0 auto 64px;
+      border-bottom: 1px solid #272722;
+      padding-bottom: 32px;
+    }
+    .page-label {
+      font-family: 'Cormorant SC', Georgia, serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      color: #bf9b5a;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #e8e3d6;
+    }
+    .page-subtitle {
+      font-size: 13px;
+      color: #5c5c54;
+      margin-top: 8px;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Logo group */
+    .logo-group {
+      max-width: 960px;
+      margin: 0 auto 80px;
+    }
+    .logo-group-label {
+      font-family: 'Cormorant SC', Georgia, serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: #5c5c54;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .logo-group-title {
+      font-size: 15px;
+      color: #9a9487;
+      margin-bottom: 28px;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+    }
+    .logo-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      border: 1px solid #1e1e1b;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    /* Swatch panels */
+    .swatch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 40px;
+      position: relative;
+      min-height: 220px;
+    }
+    .swatch-dark  { background: #0d0d0b; }
+    .swatch-mid   { background: #1a1a16; }
+    .swatch-light { background: #f5f1ea; }
+    .swatch-white { background: #ffffff; }
+
+    .swatch-label {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      font-size: 10px;
+      font-family: 'Cormorant SC', serif;
+      letter-spacing: 0.16em;
+      opacity: 0.4;
+    }
+    .swatch-dark  .swatch-label,
+    .swatch-mid   .swatch-label { color: #e8e3d6; }
+    .swatch-light .swatch-label,
+    .swatch-white .swatch-label { color: #0d0d0b; }
+
+    /* SVG containers */
+    .logo-svg { width: 100%; max-width: 340px; height: auto; display: block; }
+    .logo-svg-v2 { width: 100%; max-width: 220px; height: auto; display: block; }
+
+    /* ── Logo colors for DARK backgrounds ── (default in SVG files) */
+
+    /* ── Logo colors for LIGHT backgrounds ── override fills */
+    .on-light .name-text    { fill: #1a1a16; }
+    .on-light .tag-text     { fill: #6a6a60; }
+    .on-light .sep-line     { stroke: #ccc8be; }
+    .on-light .rule-line    { stroke: #bf9b5a; }
+    /* gold stays gold — works on both */
+
+    /* Notes section */
+    .notes {
+      max-width: 960px;
+      margin: 0 auto;
+      padding-top: 48px;
+      border-top: 1px solid #1e1e1b;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .note-card {
+      background: #131310;
+      border: 1px solid #1e1e1b;
+      border-radius: 6px;
+      padding: 28px 28px;
+    }
+    .note-title {
+      font-family: 'Cormorant SC', serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: #bf9b5a;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .note-text {
+      font-size: 13px;
+      color: #5c5c54;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 40px 20px; }
+      .logo-row { grid-template-columns: 1fr; }
+      .notes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <div class="page-label">Brand Identity</div>
+    <h1 class="page-title">Logo Options</h1>
+    <p class="page-subtitle">Two directions — each shown on dark and light backgrounds.</p>
+  </header>
+
+  <!-- ══ LOGO 1 ══════════════════════════════════════════════════ -->
+  <section class="logo-group">
+    <div class="logo-group-label">Option 1</div>
+    <div class="logo-group-title">Mark + Wordmark — Double-diamond icon with name lockup</div>
+
+    <div class="logo-row">
+
+      <!-- Dark background -->
+      <div class="swatch swatch-dark">
+        <span class="swatch-label">Dark</span>
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 76" fill="none" aria-label="Sai Bharadwaj logo">
+          <!-- Outer diamond -->
+          <polygon points="35,9 59,38 35,67 11,38" stroke="#bf9b5a" stroke-width="1.4" fill="none"/>
+          <!-- Inner diamond -->
+          <polygon points="35,21 47,38 35,55 23,38" stroke="#bf9b5a" stroke-width="0.7" fill="none" opacity="0.45"/>
+          <!-- Center dot -->
+          <circle cx="35" cy="38" r="2.2" fill="#bf9b5a"/>
+          <!-- Separator -->
+          <line x1="76" y1="15" x2="76" y2="61" stroke="#2e2e28" stroke-width="1"/>
+          <!-- Name -->
+          <text x="90" y="35" font-family="'Cormorant SC', Georgia, serif" font-size="21" font-weight="400" fill="#e8e3d6" letter-spacing="3.5">SAI BHARADWAJ</text>
+          <!-- Rule -->
+          <line x1="90" y1="42" x2="336" y2="42" stroke="#bf9b5a" stroke-width="0.5" opacity="0.5"/>
+          <!-- Tagline -->
+          <text x="90" y="57" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="300" fill="#9a9487" letter-spacing="4.2">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+      <!-- Light background -->
+      <div class="swatch swatch-white">
+        <span class="swatch-label">Light</span>
+        <svg class="logo-svg on-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 76" fill="none" aria-label="Sai Bharadwaj logo">
+          <!-- Outer diamond -->
+          <polygon points="35,9 59,38 35,67 11,38" stroke="#bf9b5a" stroke-width="1.4" fill="none"/>
+          <!-- Inner diamond -->
+          <polygon points="35,21 47,38 35,55 23,38" stroke="#bf9b5a" stroke-width="0.7" fill="none" opacity="0.45"/>
+          <!-- Center dot -->
+          <circle cx="35" cy="38" r="2.2" fill="#bf9b5a"/>
+          <!-- Separator -->
+          <line x1="76" y1="15" x2="76" y2="61" stroke="#ccc8be" stroke-width="1"/>
+          <!-- Name (dark for light bg) -->
+          <text x="90" y="35" font-family="'Cormorant SC', Georgia, serif" font-size="21" font-weight="400" fill="#1a1a16" letter-spacing="3.5">SAI BHARADWAJ</text>
+          <!-- Rule -->
+          <line x1="90" y1="42" x2="336" y2="42" stroke="#bf9b5a" stroke-width="0.5" opacity="0.5"/>
+          <!-- Tagline -->
+          <text x="90" y="57" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="300" fill="#888880" letter-spacing="4.2">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+      <!-- Mid dark -->
+      <div class="swatch swatch-mid">
+        <span class="swatch-label">Surface</span>
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 76" fill="none" aria-label="Sai Bharadwaj logo">
+          <polygon points="35,9 59,38 35,67 11,38" stroke="#bf9b5a" stroke-width="1.4" fill="none"/>
+          <polygon points="35,21 47,38 35,55 23,38" stroke="#bf9b5a" stroke-width="0.7" fill="none" opacity="0.45"/>
+          <circle cx="35" cy="38" r="2.2" fill="#bf9b5a"/>
+          <line x1="76" y1="15" x2="76" y2="61" stroke="#3a3a32" stroke-width="1"/>
+          <text x="90" y="35" font-family="'Cormorant SC', Georgia, serif" font-size="21" font-weight="400" fill="#e8e3d6" letter-spacing="3.5">SAI BHARADWAJ</text>
+          <line x1="90" y1="42" x2="336" y2="42" stroke="#bf9b5a" stroke-width="0.5" opacity="0.5"/>
+          <text x="90" y="57" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="300" fill="#9a9487" letter-spacing="4.2">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+      <!-- Off-white/cream -->
+      <div class="swatch swatch-light">
+        <span class="swatch-label">Warm</span>
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 76" fill="none" aria-label="Sai Bharadwaj logo">
+          <polygon points="35,9 59,38 35,67 11,38" stroke="#bf9b5a" stroke-width="1.4" fill="none"/>
+          <polygon points="35,21 47,38 35,55 23,38" stroke="#bf9b5a" stroke-width="0.7" fill="none" opacity="0.45"/>
+          <circle cx="35" cy="38" r="2.2" fill="#bf9b5a"/>
+          <line x1="76" y1="15" x2="76" y2="61" stroke="#ccc8be" stroke-width="1"/>
+          <text x="90" y="35" font-family="'Cormorant SC', Georgia, serif" font-size="21" font-weight="400" fill="#1a1a16" letter-spacing="3.5">SAI BHARADWAJ</text>
+          <line x1="90" y1="42" x2="336" y2="42" stroke="#bf9b5a" stroke-width="0.5" opacity="0.5"/>
+          <text x="90" y="57" font-family="'DM Sans', system-ui, sans-serif" font-size="9" font-weight="300" fill="#888880" letter-spacing="4.2">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ LOGO 2 ══════════════════════════════════════════════════ -->
+  <section class="logo-group">
+    <div class="logo-group-label">Option 2</div>
+    <div class="logo-group-title">Typographic — Italic serif first name / tracked caps surname</div>
+
+    <div class="logo-row">
+
+      <!-- Dark background -->
+      <div class="swatch swatch-dark">
+        <span class="swatch-label">Dark</span>
+        <svg class="logo-svg-v2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 106" fill="none" aria-label="Sai Bharadwaj logo">
+          <text x="150" y="54" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="66" font-style="italic" font-weight="300" fill="#bf9b5a" letter-spacing="-1">Sai</text>
+          <line x1="38" y1="63" x2="262" y2="63" stroke="#bf9b5a" stroke-width="0.5" opacity="0.4"/>
+          <text x="150" y="84" text-anchor="middle" font-family="'Cormorant SC', Georgia, serif" font-size="19" font-weight="400" fill="#e8e3d6" letter-spacing="7">BHARADWAJ</text>
+          <text x="150" y="100" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8.5" font-weight="300" fill="#9a9487" letter-spacing="4">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+      <!-- Light background -->
+      <div class="swatch swatch-white">
+        <span class="swatch-label">Light</span>
+        <svg class="logo-svg-v2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 106" fill="none" aria-label="Sai Bharadwaj logo">
+          <text x="150" y="54" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="66" font-style="italic" font-weight="300" fill="#bf9b5a" letter-spacing="-1">Sai</text>
+          <line x1="38" y1="63" x2="262" y2="63" stroke="#bf9b5a" stroke-width="0.5" opacity="0.4"/>
+          <text x="150" y="84" text-anchor="middle" font-family="'Cormorant SC', Georgia, serif" font-size="19" font-weight="400" fill="#1a1a16" letter-spacing="7">BHARADWAJ</text>
+          <text x="150" y="100" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8.5" font-weight="300" fill="#888880" letter-spacing="4">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+      <!-- Mid dark -->
+      <div class="swatch swatch-mid">
+        <span class="swatch-label">Surface</span>
+        <svg class="logo-svg-v2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 106" fill="none" aria-label="Sai Bharadwaj logo">
+          <text x="150" y="54" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="66" font-style="italic" font-weight="300" fill="#bf9b5a" letter-spacing="-1">Sai</text>
+          <line x1="38" y1="63" x2="262" y2="63" stroke="#bf9b5a" stroke-width="0.5" opacity="0.4"/>
+          <text x="150" y="84" text-anchor="middle" font-family="'Cormorant SC', Georgia, serif" font-size="19" font-weight="400" fill="#e8e3d6" letter-spacing="7">BHARADWAJ</text>
+          <text x="150" y="100" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8.5" font-weight="300" fill="#9a9487" letter-spacing="4">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+      <!-- Warm light -->
+      <div class="swatch swatch-light">
+        <span class="swatch-label">Warm</span>
+        <svg class="logo-svg-v2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 106" fill="none" aria-label="Sai Bharadwaj logo">
+          <text x="150" y="54" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="66" font-style="italic" font-weight="300" fill="#bf9b5a" letter-spacing="-1">Sai</text>
+          <line x1="38" y1="63" x2="262" y2="63" stroke="#bf9b5a" stroke-width="0.5" opacity="0.4"/>
+          <text x="150" y="84" text-anchor="middle" font-family="'Cormorant SC', Georgia, serif" font-size="19" font-weight="400" fill="#1a1a16" letter-spacing="7">BHARADWAJ</text>
+          <text x="150" y="100" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8.5" font-weight="300" fill="#888880" letter-spacing="4">STRATEGY ADVISOR</text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── NOTES ── -->
+  <div class="notes">
+    <div class="note-card">
+      <div class="note-title">Option 1 — Mark + Wordmark</div>
+      <p class="note-text">
+        Double-nested diamond with a center dot. The diamond signals precision and focus — a fixed point in strategic ambiguity. Works at small sizes (favicon, watermark on decks). The vertical separator creates clear hierarchy between mark and name.
+      </p>
+    </div>
+    <div class="note-card">
+      <div class="note-title">Option 2 — Typographic</div>
+      <p class="note-text">
+        Large italic "Sai" in gold anchors the mark — personal, warm, human. "BHARADWAJ" in tracked small caps below provides formal weight and contrast. No icon needed. Best for document headers, email signatures, and contexts where the name should stand alone.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

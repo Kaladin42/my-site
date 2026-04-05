@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 76" fill="none" role="img" aria-label="Sai Bharadwaj — Strategy Advisor">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400&amp;family=Cormorant+Garamond:wght@300;400&amp;family=DM+Sans:opsz,wght@9..40,300&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- ── MARK: double-nested diamond ── -->
+  <!-- Outer diamond -->
+  <polygon
+    points="35,9 59,38 35,67 11,38"
+    stroke="#bf9b5a"
+    stroke-width="1.4"
+    fill="none"
+  />
+  <!-- Inner diamond -->
+  <polygon
+    points="35,21 47,38 35,55 23,38"
+    stroke="#bf9b5a"
+    stroke-width="0.7"
+    fill="none"
+    opacity="0.45"
+  />
+  <!-- Center dot -->
+  <circle cx="35" cy="38" r="2.2" fill="#bf9b5a" />
+
+  <!-- ── SEPARATOR ── -->
+  <line x1="76" y1="15" x2="76" y2="61" stroke="#2e2e28" stroke-width="1" />
+
+  <!-- ── WORDMARK ── -->
+  <!-- Primary name -->
+  <text
+    x="90"
+    y="35"
+    font-family="'Cormorant SC', Georgia, serif"
+    font-size="21"
+    font-weight="400"
+    fill="#e8e3d6"
+    letter-spacing="3.5"
+  >SAI BHARADWAJ</text>
+
+  <!-- Gold rule below name -->
+  <line x1="90" y1="42" x2="336" y2="42" stroke="#bf9b5a" stroke-width="0.5" opacity="0.5" />
+
+  <!-- Tagline -->
+  <text
+    x="90"
+    y="57"
+    font-family="'DM Sans', system-ui, -apple-system, sans-serif"
+    font-size="9"
+    font-weight="300"
+    fill="#9a9487"
+    letter-spacing="4.2"
+  >STRATEGY ADVISOR</text>
+</svg>
